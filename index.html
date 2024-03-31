@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="GOAT-Bench: A Benchmark for Multi-Modal Lifelong Navigation">
+  <meta name="keywords" content="GOAT-Bench, Benchmark, Multi-Modal, Lifelong, Navigation, EmbodiedAI">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GOAT-Bench: A Benchmark for Multi-Modal Lifelong Navigation</title>
 
@@ -64,7 +64,7 @@
               <a href="">Theophile Gervet</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs">Matthew Chang</a><sup>3</sup>,
+              <a href="">Matthew Chang</a><sup>3</sup>,
             </span>
             <span class="author-block">
               <a href="">Devendra Singh Chaplot</a><sup>4</sup>
@@ -73,18 +73,21 @@
               <a href="">Zsolt Kira</a><sup>1</sup>
             </span>
             <span class="author-block">
-              <a href="">Dhruv Batra</a><sup>1,4</sup>
+              <a href="">Dhruv Batra</a><sup>1</sup>
             </span>
             <span class="author-block">
-              <a href="">Roozbeh Mottaghi</a><sup>4</sup>
+              <a href="">Roozbeh Mottaghi</a><sup>5</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Georgia Tech,</span>
             <span class="author-block"><sup>2</sup>Carnegie Mellon University</span>
+          </div>
+          <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>3</sup>University of Illinois Urbana-Champaign</span>
-            <span class="author-block"><sup>4</sup>Meta AI</span>
+            <span class="author-block"><sup>4</sup>Mistral AI</span>
+            <span class="author-block"><sup>5</sup>University of Washington</span>
           </div>
 
           <div class="column has-text-centered">
@@ -120,7 +123,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/Ram81/goat-bench"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -130,7 +133,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/Ram81/goat-bench?tab=readme-ov-file#floppy_disk-dataset"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -145,6 +148,39 @@
     </div>
   </div>
 </section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" height="100%" src="./static/images/teaser.jpeg">
+      <h2 class="subtitle has-text-centered">
+        <!-- <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits. -->
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The Embodied AI community has made significant strides in visual navigation tasks, exploring targets from 3D coordinates, objects, language descriptions, and images. However, these navigation models often handle only a single input modality as the target. With the progress achieved so far, it is time to move towards universal navigation models capable of handling various goal types, enabling more effective user interaction with robots. 
+          </p>
+          <p>
+            To facilitate this goal, we propose GOAT-Bench, a benchmark for the universal navigation task referred to as GO to AnyThing (GOAT). In this task, the agent is directed to navigate to a sequence of targets specified by the category name, language description, or image in an open-vocabulary fashion. We benchmark monolithic RL and modular methods on the GOAT task, analyzing their performance across modalities, the role of explicit and implicit scene memories, their robustness to noise in goal specifications, and the impact of memory in lifelong scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
 
 <footer class="footer">
   <div class="container">
