@@ -89,6 +89,9 @@
             <span class="author-block"><sup>4</sup>Mistral AI</span>
             <span class="author-block"><sup>5</sup>University of Washington</span>
           </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Co-first authors</span>
+          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -157,6 +160,7 @@
         <!-- <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
         free-viewpoint
         portraits. -->
+        We study the Go to Any Thing (GOAT) task and propose GOAT-Bench, a benchmark for agents navigating to a sequence of open vocabulary goals specified through any of the three modalities – category name (🏷️), a language description (🔡), or an image (📸).
       </h2>
     </div>
   </div>
@@ -166,7 +170,7 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -180,6 +184,132 @@
     </div>
     <!--/ Abstract. -->
 </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Scene visuals. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Multi-modal, Open vocabulary, and Lifelong</h2>
+        <div class="content has-text-justified">
+          <b>Muti-modal, Open vocabulary goals</b>: it is an open vocabulary benchmark, enabling the incorporation of a broad range of targets, including those not encountered during training. This is a departure from prior work, that is often limited to a small set of 6 to 21 categories.
+        </div>
+        <!-- <div class="content has-text-justified">
+            Towards developing a <b>universal</b>, <b>multi-modal</b>, <b>lifelong</b> navigation system, we introduce a benchmark named GOAT-Bench, designed to accommodate target object specifications across multiple modalities and be capable of leveraging past experiences in the same environment, i.e. operate lifelong.
+        </div> -->
+        <img src="./static/images/dataset_preview.png"
+        alt=""/>
+        <div class="content has-text-justified">
+          <b>Lifelong navigation</b>: each episode consists of 5 to 10 targets specified through distinct modalities (i.e. image, object, or language goal). This contrasts with most prior navigation benchmarks where the scene is reset after a target is reached, providing a benchmark for evaluating lifelong learning.
+        </div>
+      </div>
+    </div>
+    <!--/ Scene visuals. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Scene visuals. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Baselines</h2>
+        <div class="content has-text-justified">
+          We benchmark two types of methods: 1) Modular methods: semantic mapping and planning-based, and 2) Reinforcement Learning: sensor-to-action using neural network (SenseAct-NN) policies trained using RL.
+        </div>
+        <img src="./static/images/rl_baseline_architectures.png"
+          alt="" width=500  style="border: 0.5px solid rgb(189, 189, 189);"/>
+        <img src="./static/images/modular_goat_architecture.png"
+          alt="" width=430 style="border: 0.5px solid rgb(189, 189, 189);"/>
+        
+      </div>
+    </div>
+    <!--/ Scene visuals. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Scene visuals. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Results</h2>
+        <img src="./static/images/results.png"
+          alt=""/>
+          <div class="content">
+            Comparison of end-to-end RL and modular methods on seen and unseen categories.
+          </div>
+      </div>
+    </div>
+    <!--/ Scene visuals. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Scene visuals. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">How do agents perform on each modality?</h2>
+        <img src="./static/images/modality-wise_performance.png"
+          alt=""/>
+          <div class="content has-text-centered">
+            <b>Performance across types of modalities</b>: We breakdown the performance of all 3 baselines by modalities used subtask type: object category, language or image.
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Scene visuals. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">How important is memory for efficient navigation?</h2>
+        <img src="./static/images/memory_ablations.png"
+          alt=""/>
+          <div class="content has-text-centered">
+            <b>Usefulness of memory</b>: We benchmark the drop in performance for when no memory is maintained across subtasks for modular GOAT and SenseAct-NN Monolithic RL baselines.
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Scene visuals. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Does success and efficiency improve over time?</h2>
+        <img src="./static/images/performance_over_time.png"
+          alt=""/>
+          <div class="content has-text-centered">
+            <b>Average performance over time in a GOAT episode</b>: We plot the success rate and SPL of memory based baselines against the number of subtasks completed in a GOAT episode
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Scene visuals. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">How robust are these methods to noise in goal specifications?</h2>
+        <img src="./static/images/noisy_evals_per_modality.png"
+          alt=""/>
+          <div class="content has-text-justified">
+            <b>Robustness to noise</b>: We breakdown the effect of noise on performance of different baselines by goal modality.
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
